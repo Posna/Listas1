@@ -151,6 +151,14 @@ namespace Listas
             while (buscaElto(e))
                 BorraElto(e);
         }
+
+        public void BorraNesimo(int n)
+        {
+            if(nEsimoNodo(n) != null)
+            {
+                nEsimoNodo(n - 1).sig = nEsimoNodo(n + 1);
+            }
+        }
     }
 
 
